@@ -15,15 +15,7 @@ contract Ganymede is Context, IERC20, Ownable {
     mapping (address => uint256) private _rOwned;
     mapping (address => uint256) private _tOwned;
     mapping (address => mapping (address => uint256)) private _allowances;
-
     mapping (address => bool) private _isExcludedFromFee;
-
-
-
-
-
-
-
     mapping (address => bool) private _isExcluded;
     address[] private _excluded;
 
@@ -50,7 +42,7 @@ contract Ganymede is Context, IERC20, Ownable {
     uint256 public _maxTxAmount = 6283 * 10**5 * 10**9;
     uint256 private minimumTokensBeforeSwap = 10**9;
 
-    address payable public charityAddress = 0x8B99F3660622e21f2910ECCA7fBe51d654a1517D; // Charity Address
+    address payable public charityAddress = payable(address(0x8B99F3660622e21f2910ECCA7fBe51d654a1517D)); // Charity Address
     //See https://www.binance.charity/binance-charity-wallet/donate-anonymously to confirm this is the right Address
 
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -73,7 +65,7 @@ contract Ganymede is Context, IERC20, Ownable {
         inSwapAndLiquify = false;
     }
 
-    constructor () public {
+    constructor () {
         _rOwned[_msgSender()] = _rTotal;
 
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
