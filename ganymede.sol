@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
-import "@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol";
-import "@pancakeswap/pancake-swap-lib/contracts/utils/Address.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./contracts/utils/math/SafeMath.sol";
+import "./contracts/access/Ownable.sol";
+import "./contracts/utils/Address.sol";
+import "./contracts/token/ERC20/IERC20.sol";
 import "./interfaces/IUniswapV2Router02.sol";
 import "./interfaces/IUniswapV2Factory.sol";
 
