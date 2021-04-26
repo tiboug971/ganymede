@@ -5,8 +5,8 @@ import "./contracts/utils/math/SafeMath.sol";
 import "./contracts/access/Ownable.sol";
 import "./contracts/utils/Address.sol";
 import "./contracts/token/ERC20/IERC20.sol";
-import "./interfaces/IUniswapV2Router02.sol";
-import "./interfaces/IUniswapV2Factory.sol";
+import "./contracts/interfaces/IUniswapV2Router02.sol";
+import "./contracts/interfaces/IUniswapV2Factory.sol";
 
 contract Ganymede is Context, IERC20, Ownable {
     using SafeMath for uint256;
